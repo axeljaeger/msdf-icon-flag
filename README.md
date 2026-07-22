@@ -37,6 +37,13 @@ Open the local URL printed by Vite. Build the production bundle with:
 pnpm build
 ```
 
+## Babylon Lite Playground
+
+A [reduced example in the Babylon Lite Playground](https://liteplayground.babylonjs.com/snippet/YUW4PZ/v/0)
+contains the flag, texture array, MSDF sampling and UV repeat without the
+inspector. It loads the layer PNGs from this repository's GitHub Pages
+deployment.
+
 ## MSDF asset pipeline
 
 `scripts/generate-icons.ts` uses `msdf-bmfont-xml` and the bundled Material
@@ -55,16 +62,6 @@ its own 256×256 layer before the application uploads the images to the GPU.
 included solely to make the MSDF generation script reproducible. Google
 licenses Material Icons under Apache-2.0; see the upstream
 [license](https://github.com/google/material-design-icons/blob/master/LICENSE).
-
-## GitHub Pages
-
-Pushing to `main` triggers [the deployment workflow](.github/workflows/deploy.yml).
-The Vite base URL is configured for this repository's Pages path:
-
-`https://axeljaeger.github.io/msdf-icon-flag/`
-
-In the repository's **Settings → Pages**, set the deployment source to
-**GitHub Actions** once. The workflow will then build `dist/` and deploy it.
 
 ## Project structure
 
