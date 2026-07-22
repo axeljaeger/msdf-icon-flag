@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Texture Array · Heraldic Flag</title>
+  </head>
+  <body>
+    <main>
+      <canvas id="renderCanvas" aria-label="Animated heraldic flag"></canvas>
+      <aside class="panel" aria-label="Texture array inspector">
+        <p class="eyebrow">BABYLON LITE · WEBGPU</p>
+        <h1>Texture Array</h1>
+        <details class="inspector-details">
+          <summary><span>How it works</span><small>5 layers · repeat U + V</small></summary>
+          <section class="texture-explanation">
+            <div class="texture-copy">
+              <p>A texture array stores five equally sized MSDF icon textures as independently addressable layers. The flag selects the highlighted layer every second.</p>
+              <p>The shader repeats its UV coordinates in both directions, so one sampled icon tiles across the 2 × 2 heraldic grid. MSDF keeps the icon edges crisp while the flag moves.</p>
+              <p>Unlike a texture atlas, this is still one bound texture unit with repeat wrapping in both U and V for every layer. An atlas would repeat into neighbouring icons instead.</p>
+            </div>
+            <div class="layer-gallery" aria-label="Texture array layers">
+              <figure class="icon-layer-card is-active" data-layer="0">
+                <img src="icons/layers/home.png" alt="MSDF texture layer 0: home" />
+                <figcaption><span>0</span> home</figcaption>
+              </figure>
+              <figure class="icon-layer-card" data-layer="1">
+                <img src="icons/layers/favorite.png" alt="MSDF texture layer 1: favorite" />
+                <figcaption><span>1</span> favorite</figcaption>
+              </figure>
+              <figure class="icon-layer-card" data-layer="2">
+                <img src="icons/layers/star.png" alt="MSDF texture layer 2: star" />
+                <figcaption><span>2</span> star</figcaption>
+              </figure>
+              <figure class="icon-layer-card" data-layer="3">
+                <img src="icons/layers/face.png" alt="MSDF texture layer 3: face" />
+                <figcaption><span>3</span> face</figcaption>
+              </figure>
+              <figure class="icon-layer-card" data-layer="4">
+                <img src="icons/layers/pets.png" alt="MSDF texture layer 4: pets" />
+                <figcaption><span>4</span> pets</figcaption>
+              </figure>
+            </div>
+          </section>
+          <a class="repository-link" href="https://github.com/axeljaeger/msdf-icon-flag" target="_blank" rel="noreferrer">View source on GitHub <span aria-hidden="true">↗</span></a>
+        </details>
+      </aside>
+      <p id="unsupported" class="unsupported" hidden>This demo requires a browser with WebGPU support.</p>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
