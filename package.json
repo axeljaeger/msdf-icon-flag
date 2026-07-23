@@ -8,7 +8,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "generate:icons": "tsx scripts/generate-icons.ts"
+    "generate:icons": "tsx scripts/generate-icons.ts",
+    "generate:ktx2": "sh scripts/generate-ktx2-array.sh"
   },
   "dependencies": {
     "@babylonjs/lite": "^1.12.0",

@@ -56,6 +56,21 @@ Each texture-array layer must have identical width, height, and format. The
 generator therefore extracts every glyph from the MSDF atlas and centers it in
 its own 256×256 layer before the application uploads the images to the GPU.
 
+### KTX2 array reference asset
+
+`public/icons/material-icons-msdf-array.ktx2` packages those same five PNGs as
+one real 2D texture array: five 256×256 `R8G8B8A8_UNORM` layers and nine
+precomputed mip levels. It is deliberately uncompressed and marked as linear,
+so it is a small, transparent reference asset for testing a future direct KTX2
+array loader; the live demo continues to use the PNG layer path.
+
+Recreate and validate it after regenerating the PNGs with the official
+[KTX-Software](https://github.com/KhronosGroup/KTX-Software) CLI installed:
+
+```sh
+pnpm generate:ktx2
+```
+
 ## Third-party asset
 
 `assets/MaterialIcons-Regular.ttf` is derived from Google Material Icons and is
@@ -68,7 +83,9 @@ licenses Material Icons under Apache-2.0; see the upstream
 ```text
 assets/                     Material Icons source font (Apache-2.0)
 public/icons/layers/        Generated MSDF layer PNGs
+public/icons/*.ktx2         Five-layer KTX2 array reference asset
 scripts/generate-icons.ts   MSDF generation and layer extraction
+scripts/generate-ktx2-array.sh KTX2 array creation and validation
 src/main.ts                 Babylon Lite scene and WGSL shader
 src/style.css               Inspector UI
 .github/workflows/deploy.yml GitHub Pages deployment
