@@ -44,7 +44,7 @@ contains the flag, texture array, MSDF sampling and UV repeat without the
 inspector. It loads the layer PNGs from this repository's GitHub Pages
 deployment.
 
-A second playground loads the complete array from a single ktx2 file: [Loading array from KTX2] (https://liteplayground.babylonjs.com/snippet/YUW4PZ/v/1).
+A second playground loads the complete array from a single ktx2 file: [Loading array from KTX2](https://liteplayground.babylonjs.com/snippet/YUW4PZ/v/1).
 
 
 ## MSDF asset pipeline
