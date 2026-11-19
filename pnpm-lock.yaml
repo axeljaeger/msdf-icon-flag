@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@babylonjs/lite':
-        specifier: ^1.38.2
-        version: 1.38.2
+        specifier: ^1.39.3
+        version: 1.39.3
       '@material-design-icons/font':
         specifier: ^0.14.13
         version: 0.14.15
@@ -36,8 +36,8 @@ importers:
 
 packages:
 
-  '@babylonjs/lite@1.38.2':
-    resolution: {integrity: sha512-rIuwt7CuyaXWSUEy53uexn1FCb0WhXR5ZKadkFPJQF0IiG9LHymwQPU5i3Zwp6B7ODjKMbzMHRozJX1kmyTugA==}
+  '@babylonjs/lite@1.39.3':
+    resolution: {integrity: sha512-G2YRiizzqWyI9dTSiXrHed8w3NMLm833AoHOHVZJlt83SBjgVDLi8tMX29lXSJ3UtXe+iygULWaBn+7byg5Vig==}
     peerDependencies:
       '@babylonjs/havok': ^1.3.0
       '@webgpu/types': ^0.1.52
@@ -1306,7 +1306,7 @@ packages:
 
 snapshots:
 
-  '@babylonjs/lite@1.38.2':
+  '@babylonjs/lite@1.39.3':
     dependencies:
       '@types/webxr': 0.5.24
 
